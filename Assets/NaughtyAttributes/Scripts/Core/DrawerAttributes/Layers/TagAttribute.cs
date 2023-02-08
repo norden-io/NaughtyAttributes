@@ -6,6 +6,7 @@ namespace NaughtyAttributes
 	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
 	public class TagAttribute : BaseLayerStringAttribute
 	{
+#if UNITY_EDITOR
 		public override string[] GetLayers()
 		{
 			List<string> tagList = new List<string>();
@@ -15,5 +16,6 @@ namespace NaughtyAttributes
             
 			return tagList.ToArray();
 		}
+#endif
 	}
 }

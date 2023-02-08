@@ -4,6 +4,6 @@ namespace NaughtyAttributes
 {
 	[AttributeUsage(AttributeTargets.Field)]
 	public abstract class BaseLayerStringAttribute : DrawerAttribute {
-		public abstract string[] GetLayers();
+		public virtual string[] GetLayers() => new [] {"- NOT IMPLEMENTED -"};
 	}
 }
