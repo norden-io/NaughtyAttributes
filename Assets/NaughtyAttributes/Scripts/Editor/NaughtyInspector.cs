@@ -120,7 +120,8 @@ namespace NaughtyAttributes.Editor
                     _foldouts[group.Key] = new SavedBool($"{target.GetInstanceID()}.{group.Key}", false);
                 }
 
-                _foldouts[group.Key].Value = EditorGUILayout.Foldout(_foldouts[group.Key].Value, group.Key, true);
+                _foldouts[group.Key].Value = EditorGUILayout.Foldout(_foldouts[group.Key].Value, 
+                    group.Key, true, EditorStyles.foldoutHeader);
                 if (_foldouts[group.Key].Value)
                 {
                     foreach (var property in visibleProperties)
